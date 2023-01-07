@@ -56,7 +56,7 @@ html {
     left: 0;
     margin: 0 auto;
     content: "";
-    background: rgba(236, 236, 236, 0.2);
+    background: linear-gradient(132deg, rgba(247,202,54,1) 0%, rgba(204,167,47,1) 67%);
 }
 
 @keyframes downTopAnimation {
@@ -84,12 +84,12 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
    
 .header {
     margin: 0.25rem 0;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
    
 .overflow-hidden {
@@ -116,14 +116,14 @@ html {
  }
 
 /* gumbi */
-.btn {
+.btn1 {
     width: 30%;
     max-width: 150px;
     margin-bottom: -20px;
 }
 
 .button1 {
-    background-color:#00bfff
+    background-color:#3F84B9
 }
 
 /* .btn:hover {
@@ -131,21 +131,40 @@ html {
 } */
 
 .button2 {
-    background-color: #ff7f50;
+    background-color: #F7CA36;
 }
 
 .button3 {
-    background-color: #349c34;
+    background-color: #8FDB83;
 }
 
 .box1 {
-    background-color: #00bfff;
+    background-color: #3F84B9;
 }
 
 .box2 {
-    background-color: #da70d6;
+    background-color: #FF6190;
 }
 
 .row {
     padding: 1rem;
+}
+
+/* background colors */
+
+.colorSunglow {
+    background-color: #F7CA36;
+}
+
+.colorLiberty {
+    background-color: #494AA3;
+}
+
+.headergradient {
+    background: rgb(247,202,54);
+    background: linear-gradient(132deg, rgba(247,202,54,1) 0%, rgba(204,167,47,1) 67%);
+}
+
+.footercolor {
+    background-color: #8FDB83;
 }
