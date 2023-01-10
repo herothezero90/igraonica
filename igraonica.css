@@ -127,17 +127,28 @@ html {
     background-color:#3F84B9
 }
 
-/* .btn:hover {
-    background-color: rgba(208, 208, 208, 0.202);
-} */
+.button1:hover, .button1:focus, .button1:active, .button1.active, .open>.dropdown-toggle.button1 {
+    color: #336a94;
+    background-color:#336a94;
+}
 
 .button2 {
     /* background-color: #F7CA36; */
     background-color: #494AA3;
 }
 
+.button2:hover, .button2:focus, .button2:active, .button2.active, .open>.dropdown-toggle.button2 {
+    color: #3b3c84;
+    background-color:#3d3e84;
+}
+
 .button3 {
     background-color: #8FDB83;
+}
+
+.button3:hover, .button3:focus, .button3:active, .button3.active, .open>.dropdown-toggle.button3 {
+    color: #79bc6f;
+    background-color:#79bc6f;
 }
 
 .box1 {
