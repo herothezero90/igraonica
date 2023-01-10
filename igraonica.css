@@ -4,6 +4,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     min-height: 100vh;
+    user-select: none;
 }
 
 html {
@@ -89,7 +90,7 @@ html {
    
 .header {
     margin: 0.25rem 0;
-    font-size: 4rem;
+    /* font-size: 4rem; */
 }
    
 .overflow-hidden {
@@ -131,7 +132,8 @@ html {
 } */
 
 .button2 {
-    background-color: #F7CA36;
+    /* background-color: #F7CA36; */
+    background-color: #494AA3;
 }
 
 .button3 {
@@ -157,14 +159,31 @@ html {
 }
 
 .colorLiberty {
-    background-color: #494AA3;
+    /* background-color: #494AA3; */
+    background-color: #F7CA36;
 }
 
 .headergradient {
-    background: rgb(247,202,54);
-    background: linear-gradient(132deg, rgba(247,202,54,1) 0%, rgba(204,167,47,1) 67%);
-}
+    background: 
+      repeating-radial-gradient(
+        circle at 0 0, 
+        #F7CA36,
+        #c4a02b 60px
+      );
+  }
 
 .footercolor {
-    background-color: #8FDB83;
+    background-color: #494AA3;
+}
+
+.bg-image {
+    background-repeat: none;
+    background-size: cover;
+}
+
+.small p{
+    text-transform: lowercase;
+}
+.small p::first-letter{
+    text-transform: capitalize;
 }
