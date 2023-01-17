@@ -78,7 +78,7 @@ html {
 } 
 
 /* animacija vila tresnjica */
-.container {
+.container1 {
     height: 30vh;
     max-width: 1000px;
     margin: auto;
@@ -124,7 +124,7 @@ html {
 }
 
 .button1 {
-    background-color:#3F84B9
+    background-color:#3F84B9;
 }
 
 .button1:hover, .button1:focus, .button1:active, .button1.active, .open>.dropdown-toggle.button1 {
@@ -198,3 +198,58 @@ html {
 .small p::first-letter{
     text-transform: capitalize;
 }
+
+/* animacija na mainu  */
+
+.scale-up-left {
+	animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-left {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 0% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 0% 50%;
+    }
+  }
+
+.scale-up-right {
+	animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-right {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 100% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 100% 50%;
+    }
+  }
+
+/* pozadinske boje dodatno Vila tresnjica */
+
+.e1 {
+    background-color: #336a94;
+}
+.e2 {
+    background-color:#FF6190
+}
+.e3 {
+    background-color:#349c34
+}
+.e4 {
+    background-color:#3d3e84
+}
+.e5 {
+    background-color:#c4a02b
+}
+  
+  
+  
+  
+  
