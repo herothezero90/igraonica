@@ -40,6 +40,7 @@ main {
     will-change: transform, opacity;
     animation: slide 1s 1 linear forwards;
     position: absolute;    
+    z-index: 4;
 }
 .b1 {
     left: 60%;
