@@ -1,5 +1,4 @@
 body {
-    /* font-family: 'Montserrat', sans-serif; */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -23,7 +22,6 @@ html {
     margin: 20px 30px;
     animation-timing-function: ease-out;
     will-change: transform, opacity;
-    /* da ostane skroz gore */
     animation: slide 1s 1 linear forwards;
     position: absolute;    
 }
@@ -90,7 +88,6 @@ html {
    
 .header {
     margin: 0.25rem 0;
-    /* font-size: 4rem; */
 }
    
 .overflow-hidden {
@@ -133,7 +130,6 @@ html {
 }
 
 .button2 {
-    /* background-color: #F7CA36; */
     background-color: #494AA3;
 }
 
@@ -170,18 +166,8 @@ html {
 }
 
 .colorLiberty {
-    /* background-color: #494AA3; */
     background-color: #F7CA36;
 }
-
-.headergradient {
-    background: 
-      repeating-radial-gradient(
-        circle at 0 0, 
-        #F7CA36,
-        #c4a02b 60px
-      );
-  }
 
 .footercolor {
     background-color: #494AA3;

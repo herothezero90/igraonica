@@ -44,7 +44,7 @@ let activePackage = "basic";
 
 $('header button').click(function(){
     $('#package').empty();
-    $('form small').hide();
+    $('#message').hide();
 
     // add package content
     $.each(content[$(this).data('package')], function() {
@@ -69,7 +69,7 @@ $('header button').click(function(){
     }
 
     if (activePackage === 'package2') {
-        $('form small').show();
+        $('#message').show();
     }
     
     // display basic price for package
