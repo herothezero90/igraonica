@@ -30,8 +30,8 @@ const content = {
 
 const prices = {
     "basic" : 100,
-    "package1" : 150,
-    "package2" : 200
+    "package1" : 120,
+    "package2" : 150
 }
 
 const colors = {
