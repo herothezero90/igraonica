@@ -12,6 +12,15 @@ html {
     background-color: black;
 }
 
+header {
+    background-image: url(Shutterstock_2214363739.jpg);
+    height: 32.5vh;
+    z-index: 1;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 main {
     flex-grow: 1;
 }
@@ -179,10 +188,10 @@ main {
     background-color: #494AA3;
 }
 
-.bg-image {
+/* .bg-image {
     background-repeat: none;
     background-size: cover;
-}
+} */
 
 .small p{
     text-transform: lowercase;
