@@ -10,10 +10,11 @@ body {
 
 html {
     background-color: black;
+    overflow-x: hidden;
 }
 
 header {
-    background-image: url(Shutterstock_2214363739.jpg);
+    background-image: url(./Shutterstock_2214363739.jpg);
     height: 32.5vh;
     z-index: 1;
     min-height: 150px;
