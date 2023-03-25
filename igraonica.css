@@ -4,26 +4,10 @@ body {
     margin-right: auto;
     min-height: 100vh;
     user-select: none;
-    display: flex;
-    flex-direction: column;
 }
 
 html {
     background-color: black;
-    overflow-x: hidden;
-}
-
-header {
-    background-image: url(./Shutterstock_2214363739.jpg);
-    height: 32.5vh;
-    z-index: 1;
-    min-height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-main {
-    flex-grow: 1;
 }
 
 /* balon  */
@@ -39,8 +23,9 @@ main {
     animation-timing-function: ease-out;
     will-change: transform, opacity;
     animation: slide 1s 1 linear forwards;
+    -webkit-animation: slide 1s 1 linear forwards;
+    -moz-animation: slide 1s 1 linear forwards;
     position: absolute;    
-    z-index: 4;
 }
 .b1 {
     left: 60%;
@@ -48,6 +33,8 @@ main {
     animation-delay: 0s;
     bottom: -850px;
     animation-name: downTopAnimation, swing;
+    -webkit-animation-name: downTopAnimation, swing;
+    -moz-animation-name: downTopAnimation, swing;
     opacity: 1;
 }
 .balloon:before {
@@ -84,12 +71,46 @@ main {
     }
 }
 
+@-moz-keyframes downTopAnimation {
+    0% {
+      bottom: -150px;
+    }
+    100% {
+      bottom: 100%;
+    }
+}
+
+@-webkit-keyframes downTopAnimation {
+    0% {
+      bottom: -150px;
+    }
+    100% {
+      bottom: 100%;
+    }
+}
+
 @keyframes swing { 
    20% { transform: rotate(15deg); } 
    40% { transform: rotate(-10deg); } 
    60% { transform: rotate(5deg); } 
    80% { transform: rotate(-5deg); } 
    100% { transform: rotate(0deg); } 
+} 
+
+@-moz-keyframes swing { 
+    20% { transform: rotate(15deg); } 
+    40% { transform: rotate(-10deg); } 
+    60% { transform: rotate(5deg); } 
+    80% { transform: rotate(-5deg); } 
+    100% { transform: rotate(0deg); } 
+} 
+
+@-webkit-keyframes swing { 
+    20% { transform: rotate(15deg); } 
+    40% { transform: rotate(-10deg); } 
+    60% { transform: rotate(5deg); } 
+    80% { transform: rotate(-5deg); } 
+    100% { transform: rotate(0deg); } 
 } 
 
 /* animacija vila tresnjica */
@@ -113,10 +134,14 @@ main {
    
 .drop-in {
     animation: drop-in 1s ease 200ms backwards;
+    -webkit-animation: drop-in 1s ease 200ms backwards;
+    -moz-animation: drop-in 1s ease 200ms backwards;
 }
    
 .drop-in-2 {
     animation: drop-in 1200ms ease 500ms backwards;
+    -webkit-animation: drop-in 1200ms ease 500ms backwards;
+    -moz-animation: drop-in 1200ms ease 500ms backwards;
 }
    
 @keyframes drop-in {
@@ -130,11 +155,42 @@ main {
     }
  }
 
+@-moz-keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+}
+
+@-webkit-keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+}
+
 /* gumbi */
+.buttons-div {
+    margin-top: -10px;
+}
+
+.custom-shadow {
+    box-shadow: 0 0 5px black !important;
+}
+
 .btn1 {
     width: 30%;
     max-width: 150px;
-    margin-bottom: -20px;
+    min-width: fit-content;
+    /* margin-bottom: -20px; */
 }
 
 .button1 {
@@ -164,6 +220,16 @@ main {
     background-color:#79bc6f;
 }
 
+.button4 {
+    background-color: #bb99ff;
+}
+
+.button4:hover, .button4:focus, .button4:active, .button4.active, .open>.dropdown-toggle.button4 {
+    color: #9966ff;
+    background-color:#9966ff;
+}
+
+
 .box1 {
     background-color: #3F84B9;
 }
@@ -177,11 +243,6 @@ main {
 }
 
 /* background colors */
-
-.colorSunglow {
-    background-color: #F7CA36;
-}
-
 .colorLiberty {
     background-color: #F7CA36;
 }
@@ -190,15 +251,16 @@ main {
     background-color: #494AA3;
 }
 
-/* .bg-image {
+.bg-image {
     background-repeat: none;
     background-size: cover;
-} */
+}
 
-.small p{
+.footercolor .small p{
     text-transform: lowercase;
 }
-.small p::first-letter{
+
+.footercolor .small p::first-letter{
     text-transform: capitalize;
 }
 
@@ -206,6 +268,8 @@ main {
 
 .scale-up-left {
 	animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -moz-animation: scale-up-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @keyframes scale-up-left {
@@ -219,8 +283,32 @@ main {
     }
   }
 
+@-moz-keyframes scale-up-left {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 0% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 0% 50%;
+    }
+}
+
+@-webkit-keyframes scale-up-left {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 0% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 0% 50%;
+    }
+}
+
 .scale-up-right {
 	animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -moz-animation: scale-up-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @keyframes scale-up-right {
@@ -232,7 +320,48 @@ main {
       transform: scale(1);
       transform-origin: 100% 50%;
     }
-  }
+}
+
+@-moz-keyframes scale-up-right {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 100% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 100% 50%;
+    }
+}
+
+@-webkit-keyframes scale-up-right {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 100% 50%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 100% 50%;
+    }
+}
+
+.grow {
+    animation: grow 0.5s forwards;
+}
+
+@keyframes grow {
+    from {
+        font-size: 100%;
+        font-weight: normal;
+    }
+    to {
+        font-size: 105%;
+        font-weight: bolder;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
 
 /* pozadinske boje dodatno Vila tresnjica */
 
@@ -251,6 +380,81 @@ main {
 .e5 {
     background-color:#c4a02b
 }
+
+
+/* overwrite default css rules */
+.form-check-input:disabled~.form-check-label, .form-check-input[disabled]~.form-check-label {
+    /* cursor: default; */
+    opacity: 1 !important;
+}
+
+
+/* custom number input */
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .number-input {
+    border: 0;
+    display: inline-flex;
+  }
+  
+  .number-input,
+  .number-input * {
+    box-sizing: border-box;
+  }
+  
+  .number-input button {
+    outline:none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    box-shadow: 0px 0px 1px #474747;
+      border-radius: 50%;
+  }
+  
+  .number-input button:before,
+  .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+  }
+  .number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  .number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 5rem;
+    padding: .5rem;
+    border: none;
+    border-width: 0 2px;
+    font-size: 2rem;
+    height: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color:#9be3df;
+  }
   
   
   

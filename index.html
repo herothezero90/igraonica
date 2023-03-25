@@ -16,7 +16,9 @@
         <label class="balloon b1"><span></span></label>
     </section>
 
-    <header> 
+    <header class="bg-image" 
+            style="background-image: url(Shutterstock_2214363739.jpg);
+                    height: 32.5vh;"> 
         <div class="container1">
             <div class="overflow-hidden">
                 <h1 class="header drop-in text-center text-white fw-bold display-1">VILA TREŠNJICA</h1>
@@ -26,20 +28,21 @@
                 Proslava rođendana</p>
             </div>
         </div>  
-        <div class="text-center">
-            <button type="button" class="btn btn1 button1 text-white" data-package="basic">OSNOVNO</button>
-            <button type="button" class="btn btn1 button2 text-white" data-package="package1">PAKET 1</button>
-            <button type="button" class="btn btn1 button3 text-white" data-package="package2">PAKET 2</button>
-        </div>      
+        <div class="text-center d-flex flex-row flex-wrap justify-content-center align-items-center buttons-div">
+            <button type="button" class="btn btn1 button1 text-white m-1 custom-shadow bold" data-package="basic">OSNOVNO</button>
+            <button type="button" class="btn btn1 button2 text-white m-1" data-package="package1">PAKET 1</button>
+            <button type="button" class="btn btn1 button3 text-white m-1" data-package="package2">PAKET 2</button>
+            <button type="button" class="btn btn1 button4 text-white m-1" data-package="package3">ČAROBNA AVANTURA</button>
+        </div>   
     </header>
-
+      
     <main class="colorLiberty">
-        <div class="container-lg">
+        <div class="container-lg pt-2">
             <div class="row justify-content-center">
-                <div class="col-10 col-sm-4 rounded mt-5  mb-sm-5 m-1 box1 text-white p-4 small scale-up-left shadow p-3 kolona">
-                    <h3 class="text-center mb-3">ODABRANI PAKET</h3>
+                <div class="col-10 col-sm-4 rounded mt-5  mb-sm-5 m-1 box1 text-white p-4 small scale-up-left custom-shadow shadow p-3 kolona">
+                    <h3 class="text-center mb-3" id="package-name">OSNOVNO</h3>
                     <p id="price" class="text-center bg-warning me-5 ms-5 rounded fw-bold h3 border border-2 border-white">100€</p>
-                    <div id="package">
+                    <div id="package" class="mt-5">
                         <p>NEOGRANIČENI BROJ DJECE</p>
                         <p>2 SATA ANIMACIJE</p>
                         <p>2 ANIMATORA</p>
@@ -48,10 +51,11 @@
                         <p>SVJEĆICE</p>
                         <p>BUBBLE MACHINE</p>
                     </div>
-                    <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p>
+                    <!-- <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p> -->
                 </div>
-                <div class="col-10 col-sm-4 rounded mt-3 mt-sm-5  mb-5 m-1 box2 text-white p-4 small scale-up-right shadow p-3">
+                <div class="col-10 col-sm-4 rounded mt-3 mt-sm-5  mb-5 m-1 box2 text-white p-4 small scale-up-right custom-shadow shadow p-3">
                     <h3 class="text-center mb-4">POSEBNA PONUDA</h3>
+                    <p style="display: none;" id="message">* odaberi besplatno do 5 artikala iz posebne ponude</p>
                     <form class="mb-3">
                         <div class="form-check mb-2">
                                 <input class="form-check-input" type="checkbox" value="15" id="add1" name="add1">
@@ -107,6 +111,34 @@
                                 Korištenje jedne prostorije za roditelje
                             </label>
                         </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="15" id="add10" name="add10">
+                            <label class="form-check-label" for="add10">               
+                                Pola sata više zabave
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="10" id="add11" name="add11">
+                            <label class="form-check-label" for="add11">               
+                                Pokrivka za tortu
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="5" id="add12" name="add12">
+                            <label class="form-check-label" for="add12">               
+                                2 isprintane fotke na foto papiru
+                            </label>
+                        </div>
+                        <div class="form-check mb-2 d-flex flex-column d-none" id="add13">
+                            <label class="label mb-3" for="quantity">               
+                                Dodatno djece:
+                            </label>
+                            <div class="number-input d-flex flex-row align-items-center">
+                                <button type="button" class="m-2" onclick="if (this.parentNode.querySelector('input[type=number]').value !== '0') {this.parentNode.querySelector('input[type=number]').stepDown(); adjustPrice('minus');}" ></button>
+                                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                                <button type="button" class="m-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); adjustPrice('plus');" class="plus"></button>
+                            </div>
+                            </div>
                     </form>
                 </div>
             </div>
